@@ -78,7 +78,7 @@ update_radiant <- function() {
 #' }
 #'
 #' @export
-win_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "radiant.basics", "radiant.model", "radiant.multivariate")) {
+win_launcher <- function(app = c("radiant", "radiant.data")) {
 
   if (!interactive()) stop("This function can only be used in an interactive R session")
 
@@ -134,7 +134,7 @@ win_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
 #' }
 #'
 #' @export
-mac_launcher <- function(app = c("radiant","radiant.data","radiant.design","radiant.basics","radiant.model","radiant.multivariate")) {
+mac_launcher <- function(app = c("radiant","radiant.data")) {
 
   if (!interactive()) stop("This function can only be used in an interactive R session")
 
@@ -179,7 +179,7 @@ mac_launcher <- function(app = c("radiant","radiant.data","radiant.design","radi
 #' }
 #'
 #' @export
-lin_launcher <- function(app = c("radiant","radiant.data","radiant.design","radiant.basics","radiant.model","radiant.multivariate")) {
+lin_launcher <- function(app = c("radiant","radiant.data")) {
 
   if (!interactive()) stop("This function can only be used in an interactive R session")
 
@@ -228,7 +228,7 @@ lin_launcher <- function(app = c("radiant","radiant.data","radiant.design","radi
 #' }
 #'
 #' @export
-launcher <- function(app = c("radiant","radiant.data","radiant.design","radiant.basics","radiant.model","radiant.multivariate")) {
+launcher <- function(app = c("radiant","radiant.data")) {
 
   os <- Sys.info()["sysname"]
   if (os == "Darwin")

@@ -4,7 +4,7 @@ globalVariables(".rs.restartR")
 #'
 #' @name radiant
 #' @docType package
-#' @import radiant.data radiant.design radiant.basics radiant.model radiant.multivariate shiny
+#' @import radiant.data shiny
 #' @importFrom import from
 #' @importFrom utils new.packages
 NULL

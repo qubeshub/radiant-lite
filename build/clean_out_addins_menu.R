@@ -1,5 +1,4 @@
-apps <- c("radiant.data","radiant.design","radiant.basics", "radiant.model",
-          "radiant.multivariate","radiant")
+apps <- c("radiant.data", "radiant")
 
 ## build for mac
 path <- "~/gh"

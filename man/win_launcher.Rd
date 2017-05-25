@@ -4,8 +4,7 @@
 \alias{win_launcher}
 \title{Create a launcher and updater for Windows (.bat)}
 \usage{
-win_launcher(app = c("radiant", "radiant.data", "radiant.design",
-  "radiant.basics", "radiant.model", "radiant.multivariate"))
+win_launcher(app = c("radiant", "radiant.data"))
 }
 \arguments{
 \item{app}{App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"}
