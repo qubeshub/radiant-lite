@@ -1,37 +1,37 @@
 shinyServer(function(input, output, session) {
 
   ## source shared functions
-  source(file.path(getOption("radiant.path.data"),"app/init.R"), encoding = getOption("radiant.encoding"), local = TRUE)
-  source(file.path(getOption("radiant.path.data"),"app/radiant.R"), encoding = getOption("radiant.encoding"), local = TRUE)
+  source(file.path(getOption("serenity.path.data"),"app/init.R"), encoding = getOption("serenity.encoding"), local = TRUE)
+  source(file.path(getOption("serenity.path.data"),"app/serenity.R"), encoding = getOption("serenity.encoding"), local = TRUE)
 
-  ## source data & app tools from radiant.data
-  for (file in list.files(c(file.path(getOption("radiant.path.data"),"app/tools/app"),
-                            file.path(getOption("radiant.path.data"),"app/tools/data")),
+  ## source data & app tools from serenity.data
+  for (file in list.files(c(file.path(getOption("serenity.path.data"),"app/tools/app"),
+                            file.path(getOption("serenity.path.data"),"app/tools/data")),
                           pattern = "\\.(r|R)$", full.names = TRUE))
-    source(file, encoding = getOption("radiant.encoding"), local = TRUE)
+    source(file, encoding = getOption("serenity.encoding"), local = TRUE)
 
-  ## list of radiant menu's to include
-  rmenus <- c("radiant.data")
+  ## list of serenity menu's to include
+  rmenus <- c("serenity.data")
 
   ## packages to use for example data
-  options(radiant.example.data = rmenus)
+  options(serenity.example.data = rmenus)
 
   for (i in rmenus[-1]) {
-    ## 'sourcing' radiant's package functions in the server.R environment
-    eval(parse(text = paste0("radiant.data::copy_all(",i,")")))
+    ## 'sourcing' serenity's package functions in the server.R environment
+    eval(parse(text = paste0("serenity.data::copy_all(",i,")")))
 
     ipath <- paste0(strsplit(i,"\\.")[[1]], collapse = ".path.")
 
     ## help ui
-    source(file.path(getOption(ipath), "app/help.R"), encoding = getOption("radiant.encoding"), local = TRUE)
+    source(file.path(getOption(ipath), "app/help.R"), encoding = getOption("serenity.encoding"), local = TRUE)
 
     ## source analysis tools for each app
     for (file in list.files(file.path(getOption(ipath),"app/tools/analysis"), pattern="\\.(r|R)$", full.names = TRUE))
-      source(file, encoding = getOption("radiant.encoding"), local = TRUE)
+      source(file, encoding = getOption("serenity.encoding"), local = TRUE)
   }
 
   ## ui creation functions
-  # source(file.path(getOption("radiant.path.model"),"app/radiant.R"), encoding = getOption("radiant.encoding"), local = TRUE)
+  # source(file.path(getOption("serenity.path.model"),"app/serenity.R"), encoding = getOption("serenity.encoding"), local = TRUE)
 
   ## help ui
   output$help_ui <- renderUI({
