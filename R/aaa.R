@@ -1,10 +1,10 @@
 globalVariables(".rs.restartR")
 
-#' radiant
+#' serenity
 #'
-#' @name radiant
+#' @name serenity
 #' @docType package
-#' @import radiant.data shiny
+#' @import serenity.data shiny
 #' @importFrom import from
 #' @importFrom utils new.packages
 NULL

@@ -1,14 +1,14 @@
-Package: radiant
+Package: serenity
 Type: Package
-Title: Business Analytics using R and Shiny
-Version: 0.8.1
-Date: 2017-5-16
-Authors@R: person("Vincent", "Nijs", , "radiant@rady.ucsd.edu", c("aut", "cre"))
-Description: A platform-independent browser-based interface for business
-    analytics in R, based on the shiny package.
+Title: Serenity: Data Science in the Classroom
+Version: 0.1
+Date: 2017-6-16
+Authors@R: c(person("M. Drew", "LaMar", email = "mdlama@wm.edu", role = c("aut", "cre")),
+person("Vincent", "Nijs", email = "radiant@rady.ucsd.edu", role = c("att")))
+Description: A platform-independent browser-based interface to data science tools for the classroom.
 Depends:
     R (>= 3.3.0),
-    radiant.data (>= 0.8.1)
+    serenity.data (>= 0.8.1)
 Imports:
     psych (>= 1.6.6),
     AlgDesign (>= 1.1.7.3),
@@ -19,8 +19,8 @@ Suggests:
     testthat (>= 1.0.0),
     knitr,
     rmarkdown
-URL: https://github.com/radiant-rstats/radiant
-BugReports: https://github.com/radiant-rstats/radiant/issues
+URL: https://github.com/the-serenity-now/serenity
+BugReports: https://github.com/the-serenity-now/serenity/issues
 License: AGPL-3 | file LICENSE
 LazyData: true
 RoxygenNote: 6.0.1
