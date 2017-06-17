@@ -3,8 +3,7 @@ Type: Package
 Title: Serenity: Data Science in the Classroom
 Version: 0.0.0.9000
 Date: 2017-6-16
-Authors@R: c(person("M. Drew", "LaMar", email = "mdlama@wm.edu", role = c("aut", "cre")),
-person("Vincent", "Nijs", email = "radiant@rady.ucsd.edu", role = c("att")))
+Authors@R: c(person("M. Drew", "LaMar", email = "mdlama@wm.edu", role = c("aut", "cre")), person("Vincent", "Nijs", email = "radiant@rady.ucsd.edu", role = c("att")))
 Description: A platform-independent browser-based interface to data science tools for the classroom.
 Depends:
     R (>= 3.3.0),
