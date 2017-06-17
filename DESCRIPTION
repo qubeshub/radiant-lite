@@ -19,8 +19,8 @@ Suggests:
     testthat (>= 1.0.0),
     knitr,
     rmarkdown
-URL: https://github.com/the-serenity-now/serenity
-BugReports: https://github.com/the-serenity-now/serenity/issues
+URL: https://github.com/serenity-r/serenity
+BugReports: https://github.com/serenity-r/serenity/issues
 License: AGPL-3 | file LICENSE
 LazyData: true
 RoxygenNote: 6.0.1

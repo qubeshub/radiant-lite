@@ -1,3 +1,7 @@
+# CHANGES IN serenity VERSION 0.1
+
+- Rebranding to serenity
+
 # CHANGES IN radiant VERSION 0.8.1
 
 - Added a check to see if radiant::update_radiant() is running in Rstudio

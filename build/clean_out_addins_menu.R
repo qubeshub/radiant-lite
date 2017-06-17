@@ -1,4 +1,4 @@
-apps <- c("radiant.data", "radiant")
+apps <- c("serenity.data", "serenity")
 
 ## build for mac
 path <- "~/gh"
