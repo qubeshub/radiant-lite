@@ -1,4 +1,4 @@
-# CHANGES IN serenity VERSION 0.1
+# CHANGES IN serenity VERSION 0.0.0.9000
 
 - Rebranding to serenity
 
