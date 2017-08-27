@@ -1,4 +1,7 @@
-# Serenity - Data Science in the Classroom
+<h1>Serenity - Data Science in the Classroom</h1><img src="" align="right" />
+---
+
+[![stability-experimental](https://img.shields.io/badge/stability-experimental-orange.svg)](https://github.com/joethorley/stability-badges#experimental)
 
 A platform-independent browser-based interface to data science tools for the classroom.
 
