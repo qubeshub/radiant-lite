@@ -1,4 +1,4 @@
-## building serenity packages for mac and windows
+## building radiant packages for mac and windows
 setwd("~/gh/")
 
 rv <- R.Version()
@@ -22,27 +22,27 @@ if (!file.exists(dirsrc)) dir.create(dirsrc, recursive = TRUE)
 if (!file.exists(dirmac)) dir.create(dirmac, recursive = TRUE)
 if (!file.exists(dirwin)) dir.create(dirwin, recursive = TRUE)
 
-## delete older version of serenity
+## delete older version of radiant
 rem_old <- function(app) {
 	unlink(paste0(dirsrc, "/", app, "*"))
 	unlink(paste0(dirmac, "/", app, "*"))
 	unlink(paste0(dirwin, "/", app, "*"))
 }
 
-sapply("serenity", rem_old)
+sapply("radiant", rem_old)
 
-apps <- c("serenity", "serenity.data")
+apps <- c("radiant", "radiant.data")
 
 ## probably need to restart Rstudion before building
 ## avoid 'loaded namespace' stuff when building for mac
-system(paste0(Sys.which("R"), " -e \"source('serenity/build/build_mac.R')\""))
+system(paste0(Sys.which("R"), " -e \"source('radiant/build/build_mac.R')\""))
 
 win <- readline(prompt = "Did you build on Windows? y/n: ")
 if (grepl("[yY]", win)) {
 
-  # system(paste0(Sys.which("R"), " -e \"source('serenity/build/build_win.R')\""))
+  # system(paste0(Sys.which("R"), " -e \"source('radiant/build/build_win.R')\""))
 
-  ## move packages to serenity_miniCRAN. must package in Windows first
+  ## move packages to radiant_miniCRAN. must package in Windows first
   setwd("~/gh/")
   sapply(list.files(".",pattern = "*.tar.gz"), file.copy, dirsrc)
   unlink("*.tar.gz")
@@ -58,9 +58,9 @@ if (grepl("[yY]", win)) {
   # commit to repo
   setwd("~/gh/minicran")
   system("git add --all .")
-  mess <- paste0("serenity package updates: ", format(Sys.Date(), format="%m-%d-%Y"))
+  mess <- paste0("radiant package updates: ", format(Sys.Date(), format="%m-%d-%Y"))
   system(paste0("git commit -m '",mess,"'"))
   system("git push")
-  setwd("~/gh/serenity")
+  setwd("~/gh/radiant")
 
 }

@@ -1,5 +1,5 @@
-## ui for design menu in serenity
+## ui for design menu in radiant
 do.call(navbarPage,
-  c("Serenity [under development]", getOption("serenity.nav_ui"), getOption("serenity.shared_ui"),
+  c("Radiant", getOption("radiant.nav_ui"), getOption("radiant.shared_ui"),
     help_menu("help_ui"))
 )

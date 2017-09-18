@@ -1,5 +1,5 @@
 context("Installed")
 
-test_that("serenity.data", {
-  expect_true("serenity.data" %in% installed.packages())
+test_that("radiant.data", {
+  expect_true("radiant.data" %in% installed.packages())
 })

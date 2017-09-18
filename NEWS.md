@@ -1,6 +1,6 @@
-# CHANGES IN serenity VERSION 0.0.0.9000
+# CHANGES IN radiant VERSION 0.0.0.9000
 
-- Rebranding to serenity
+- Modified for learning and testing.
 
 # CHANGES IN radiant VERSION 0.8.1
 
