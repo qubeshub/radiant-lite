@@ -29,18 +29,18 @@ rem_old <- function(app) {
 	unlink(paste0(dirwin, "/", app, "*"))
 }
 
-sapply("radiant", rem_old)
+sapply("radiant.lite", rem_old)
 
-apps <- c("radiant", "radiant.data")
+apps <- c("radiant.lite", "radiant.lite.data")
 
 ## probably need to restart Rstudion before building
 ## avoid 'loaded namespace' stuff when building for mac
-system(paste0(Sys.which("R"), " -e \"source('radiant/build/build_mac.R')\""))
+system(paste0(Sys.which("R"), " -e \"source('radiant.lite/build/build_mac.R')\""))
 
 win <- readline(prompt = "Did you build on Windows? y/n: ")
 if (grepl("[yY]", win)) {
 
-  # system(paste0(Sys.which("R"), " -e \"source('radiant/build/build_win.R')\""))
+  # system(paste0(Sys.which("R"), " -e \"source('radiant.lite/build/build_win.R')\""))
 
   ## move packages to radiant_miniCRAN. must package in Windows first
   setwd("~/gh/")
@@ -58,9 +58,9 @@ if (grepl("[yY]", win)) {
   # commit to repo
   setwd("~/gh/minicran")
   system("git add --all .")
-  mess <- paste0("radiant package updates: ", format(Sys.Date(), format="%m-%d-%Y"))
+  mess <- paste0("radiant.lite package updates: ", format(Sys.Date(), format="%m-%d-%Y"))
   system(paste0("git commit -m '",mess,"'"))
   system("git push")
-  setwd("~/gh/radiant")
+  setwd("~/gh/radiant.lite")
 
 }

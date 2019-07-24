@@ -11,14 +11,14 @@ shinyServer(function(input, output, session) {
     source(file, encoding = getOption("radiant.encoding"), local = TRUE)
 
   ## list of radiant menu's to include
-  rmenus <- c("radiant.data")
+  rmenus <- c("radiant.lite.data")
 
   ## packages to use for example data
   options(radiant.example.data = rmenus)
 
   for (i in rmenus[-1]) {
     ## 'sourcing' radiant's package functions in the server.R environment
-    eval(parse(text = paste0("radiant.data::copy_all(",i,")")))
+    eval(parse(text = paste0("radiant.lite.data::copy_all(",i,")")))
 
     ipath <- paste0(strsplit(i,"\\.")[[1]], collapse = ".path.")
 

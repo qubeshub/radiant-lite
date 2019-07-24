@@ -1,4 +1,4 @@
-Name: Radiant
-Description: Start Radiant
-Binding: radiant
+Name: Radiant Lite
+Description: Start Radiant Lite
+Binding: radiant.lite
 Interactive: true

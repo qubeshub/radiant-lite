@@ -1,4 +1,6 @@
-# Radiant
+# Radiant Lite
+
+### NOTE: This version of Radiant (**Radiant Lite**) is a stripped down version that includes file input/output for the QUBES server.  Documentation below pertains to the full Radiant version.
 
 Radiant is an open-source platform-independent browser-based interface for business analytics in [R](https://www.r-project.org/). The application is based on the [Shiny](https://www.rstudio.com/shiny/) package and can be run locally or on a server. Radiant was developed by [Vincent Nijs](http://rady.ucsd.edu/faculty/directory/nijs/). Please use the issue tracker on GitHub to suggest enhancements or report problems: [https://github.com/radiant-rstats/radiant/issues](https://github.com/radiant-rstats/radiant/issues). For other questions and comments please use [radiant@rady.ucsd.edu](mailto:radiant@rady.ucsd.edu).
 
